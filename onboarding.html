@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name ="viewport" content="width=device-width, initial-scale= 1.0">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <link rel ="stylesheet" href="css/materialize.min.css">
+         <!--Import Google Icon Font-->
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <link rel="stylesheet" href="onboarding.css">
+         <title>InConn-Wizard</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <div class="parent-container">
+            <div class="container">
+            <nav class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <img src="Logo.png" alt="Logo">
+                </a>
+            </nav>
+        </div>
+    </nav>
+    
+    
+</div>
+<div class="rectangle-container">
+    <div class="rectangle-box">
+        <h4>Hey Ajith! Congratulations, Welcome to <span class="highlight">InConn</span> Application</h4>
+        <p>Let's kick things off by setting up InConn to manage your assets</p>
+        <h5>Please select all the relevant options from below that describe what you want to do:</h5>
+        <div class="cards">
+            <div class="card" onclick="toggleCard(this)">Facility Management</div>
+            <div class="card" onclick="toggleCard(this)">Asset Management</div>
+            <div class="card" onclick="toggleCard(this)">Integrated Facility Management</div>
+            <div class="card" onclick="toggleCard(this)">IT Asset Management</div>
+        </div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h2>Well Done!</h2>
+                <p>InConn will handle for you.</p>
+            </div>
+            <div class="popup-buttons">
+                <button onclick="hidePopup()">Cancel</button>
+                <button onclick="proceed()">Let's go</button>
+            </div>
+        </div>
+        <button id="confirmButton" onclick="showPopup()" disabled>Confirm</button>
+
+        </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/materialize.min.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="onboarding.js"></script>
+
+</body>
+</html>

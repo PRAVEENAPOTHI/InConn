@@ -1,0 +1,266 @@
+.body{
+
+    background-color:#FFFDE8;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.nav-wrapper {
+    max-width:100%;
+    transform: translateY(0px);
+    background-color:rgb(60,59,61);
+    border-color:rgb(60,59,61);
+    overflow:hidden;
+    height:64px;
+    left:0px;
+    right:0px;
+    margin-top:-8px;
+    padding:0px;
+}
+
+
+
+@media all and (max-width: 500px) {
+   
+}
+
+.marquee-container {
+    
+    overflow: hidden;
+    background-color: #0ee4f7;
+    padding: 1px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.marquee {
+    width: 100%;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.rectangle {
+    position:fixed;
+    top:75px;
+    right: 0;
+    background-color: #3a3a3a;
+    width: 450px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+    
+}
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:5px;
+}
+
+ul li .text{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+ul li .progress{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: transparent;
+    margin: 1px;
+    display: grid;
+    place-items: center;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 125px;
+    height: 5px;
+    background-color: rgba(68, 68, 68, 0.781);
+    right: 30px;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+ul li .progress .uil{
+    display: none;
+}
+ul li .progress p{
+    font-size: 13px;
+}
+
+/* Active Css  */
+
+ul li .active{
+    background-color: #ff4732;
+    display: grid;
+    place-items: center;
+}
+li .active::after{
+    background-color: #ff4732;
+}
+ul li .active p{
+    display: none;
+}
+ul li .active .uil{
+    font-size: 20px;
+    display: flex;
+}
+
+/* Responsive Css  */
+
+@media all and (max-width: 980px) {
+    ul {
+        flex-direction: row;
+        overflow-x:auto;
+    }
+    ul li {
+        flex-direction: row;
+    }
+    ul li .progress {
+        margin: 0 10px;
+    }
+    ul li .progress::after {
+        width: 1px;
+        height: 10px;
+        bottom: 30px;
+        left: 50%;
+        background-color: #fff;
+    }
+    .one::after {
+        height: 0;
+    }
+}
+
+@media all and (max-width:600px) {
+    .progress::after {
+        width: 1px;
+        height: 10px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        background-color: #fff;
+    }
+
+    .one::after {
+        height: 0;
+    }
+}
+
+
+/* Add the following CSS to your existing styles */
+
+@media screen and (max-width: 980px) {
+    .progress-toolbar {
+        flex-direction: row; /* Change to horizontal layout */
+    }
+}
+
+/* Update the color of "Zone" to red */
+.progress-step.active {
+    background-color: red;
+}
+
+.zone-heading {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    font-family:'inter';
+}
+
+.zone-heading h2 {
+    margin: 0;
+}
+
+.close-icon {
+    cursor: pointer;
+}
+
+.toolbar-content {
+    margin-top: 10px;
+    color: #fff;
+    font-weight:bold;
+    font-family:'inter';
+}
+
+.toolbar-content1 {
+    font-family:'inter';
+    color: #fff;
+}
+
+
+
+.scrollable-content {
+    max-height: 250px;
+    margin-top: 20px;
+    padding-right: 20px; /* Add some right padding to prevent content from overlapping with scrollbar */
+    font-size:16px;
+    color:white;
+    font-family:'inter';
+    
+}
+
+.footer {
+    
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+   
+}
+
+.next-button {
+    background-color: #ff4732;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: white;
+    padding:0px 100px;
+    font-family:'inter';
+    padding:20px 10px;
+}
+
+
+
